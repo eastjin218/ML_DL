@@ -8,8 +8,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Perceptron
 # 정확도 계산을 위한 함수
 from sklearn.metrics import accuracy_score
-# 로지스트 회귀를 위한 클래스
-from sklearn.linear_model import LogisticRegression
 
 # 파일 저장을 위해서..
 import pickle
@@ -24,12 +22,12 @@ def step1_get_data():
     iris = datasets.load_iris()
     # print(iris)
     # 꽃 정보 데이터 추출
-    x = iris.data[:150, [2,3]] # 꽃잎정보
-    y = iris.target[:150]      # 꽃 종류
-    names = iris.target_names[:3] # 꽃 이름
-    # print(x[0])
-    # print(y[0])
-    # print(names[0])
+    x = iris.data[:100, [2,3]] # 꽃잎정보
+    y = iris.target[:100]      # 꽃 종류
+    names = iris.target_names[:2] # 꽃 이름
+    print(x[0])
+    print(y[0])
+    print(names[0])
     return x, y
 
 def step2_learning():
